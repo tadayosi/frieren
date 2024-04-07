@@ -21,6 +21,9 @@ struct Args {
     /// Display memory in gigabytes
     #[arg(short = 'g', long)]
     giga: bool,
+    /// Display original Japanese quotes
+    #[arg(short = 'j', long)]
+    ja: bool,
 }
 
 fn main() {
@@ -41,5 +44,5 @@ fn main() {
     };
     free::free(mode);
     println!();
-    quotes::quote();
+    quotes::quote(args.ja);
 }
