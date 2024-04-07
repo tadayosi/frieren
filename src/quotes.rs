@@ -2,14 +2,8 @@ use rand::prelude::SliceRandom;
 
 pub fn quote(ja: bool) {
     let mut rnd = rand::thread_rng();
-    println!(
-        "❄️  > {}",
-        if ja {
-            QUOTES.choose(&mut rnd).unwrap().ja
-        } else {
-            QUOTES.choose(&mut rnd).unwrap().en
-        }
-    );
+    let quote = QUOTES.choose(&mut rnd).unwrap();
+    println!("❄️  > {}", if ja { quote.ja } else { quote.en });
 }
 
 struct Quote {
