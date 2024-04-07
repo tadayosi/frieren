@@ -35,8 +35,8 @@ fn format_gigabyte(value: u64) -> String {
 fn format_human(value: u64) -> String {
     match value {
         v if v < 1_000 => format_byte(value),
-        v if v >= 1_000 && v < 1_000_000 => format_kilobyte(value),
-        v if v >= 1_000_000 && v < 1_000_000_000 => format_megabyte(value),
+        v if (1_000..1_000_000).contains(&v) => format_kilobyte(value),
+        v if (1_000_000..1_000_000_000).contains(&v) => format_megabyte(value),
         _ => format_gigabyte(value),
     }
 }
