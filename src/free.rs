@@ -13,30 +13,34 @@ pub enum Mode {
     Human,
 }
 
+const K: u64 = 1_024;
+const M: u64 = 1_024 * 1_024;
+const G: u64 = 1_024 * 1_024 * 1_024;
+
 fn format_byte(value: u64) -> String {
     format!("{}", value)
 }
 
 fn format_kilobyte(value: u64) -> String {
     let value = value as f64;
-    format!("{:.1}K", value / 1_000.0)
+    format!("{:.1}K", value / K as f64)
 }
 
 fn format_megabyte(value: u64) -> String {
     let value = value as f64;
-    format!("{:.1}M", value / 1_000_000.0)
+    format!("{:.1}M", value / M as f64)
 }
 
 fn format_gigabyte(value: u64) -> String {
     let value = value as f64;
-    format!("{:.1}G", value / 1_000_000_000.0)
+    format!("{:.1}G", value / G as f64)
 }
 
 fn format_human(value: u64) -> String {
     match value {
-        v if v < 1_000 => format_byte(value),
-        v if (1_000..1_000_000).contains(&v) => format_kilobyte(value),
-        v if (1_000_000..1_000_000_000).contains(&v) => format_megabyte(value),
+        v if v < K => format_byte(value),
+        v if (K..M).contains(&v) => format_kilobyte(value),
+        v if (M..G).contains(&v) => format_megabyte(value),
         _ => format_gigabyte(value),
     }
 }
