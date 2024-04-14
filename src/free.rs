@@ -59,9 +59,14 @@ fn format(mode: Mode, value: u64) -> String {
 struct Entry {
     #[tabled(rename = "")]
     name: &'static str,
+    #[tabled(rename = "   total   ")]
     total: String,
+    #[tabled(rename = "    used   ")]
     used: String,
+    #[tabled(rename = "    free   ")]
     free: String,
+    #[tabled(rename = " available ")]
+    available: String,
 }
 
 pub fn free(mode: Mode) {
@@ -78,19 +83,20 @@ pub fn free(mode: Mode) {
             total: format(mode, sys.total_memory()),
             used: format(mode, sys.used_memory()),
             free: format(mode, sys.free_memory()),
+            available: format(mode, sys.available_memory()),
         },
         Entry {
             name: "Swap",
             total: format(mode, sys.total_swap()),
             used: format(mode, sys.used_swap()),
             free: format(mode, sys.free_swap()),
+            available: String::from(""),
         },
     ];
 
     let mut table = Table::new(data);
     table
         .with(Style::sharp())
-        .modify(Rows::first(), Alignment::center())
         .modify(Rows::new(1..), Alignment::right());
 
     println!("{table}");
