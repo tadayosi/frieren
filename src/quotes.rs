@@ -11,7 +11,7 @@ struct Quote {
     en: &'static str,
 }
 
-const QUOTES: [Quote; 17] = [
+const QUOTES: [Quote; 28] = [
     Quote {
         ja: "たった10年一緒に旅しただけだし…",
         en: "We only traveled together for a mere ten years...",
@@ -77,7 +77,51 @@ const QUOTES: [Quote; 17] = [
         en: "Yes, Himmel would say so.",
     },
     Quote {
+        ja: "言っておくけど私強いよ。断頭台のアウラよりも。",
+        en: "I'm telling you, I am strong. Stronger than Aura the Guillotine.",
+    },
+    Quote {
+        ja: "葬送のフリーレン。",
+        en: "Frieren the Slayer.",
+    },
+    Quote {
+        ja: "ヒンメルはもういないじゃない。",
+        en: "Himmel is no longer there.",
+    },
+    Quote {
+        ja: "戦士ってのは最後まで立っていた奴が勝つんだ。",
+        en: "The warrior who stands until the end wins.",
+    },
+    Quote {
+        ja: "一生だ。お前は一生を掛けて魔族を欺くんだ。",
+        en: "A lifetime. You will deceive the demons through your whole life.",
+    },
+    Quote {
+        ja: "フリーレン、私の一番好きな魔法は、綺麗な花畑を出す魔法だ。",
+        en: "Frieren, my most favorite spell is the one that yields a beautiful field of flowers.",
+    },
+    Quote {
+        ja: "…ふざけるな。私は五百年以上生きた大魔族だ。",
+        en: "...Don't be silly. I am a great demon who has lived for more than five hundred years.",
+    },
+    Quote {
         ja: "お前の前にいるのは、千年以上生きた魔法使いだ。",
         en: "You are in front of a mage who has lived for more than one thousand years.",
+    },
+    Quote {
+        ja: "俺達はエルフってことだ。",
+        en: "We are elves, you know.",
+    },
+    Quote {
+        ja: "勇者ヒンメルの死から29年後。",
+        en: "Twenty nine years after the death of Himmel the Hero.",
+    },
+    Quote {
+        ja: "…そうだね。ヒンメルはこの剣を抜けなかったんだ。",
+        en: "...That's right. Himmel couldn't draw this sword out.",
+    },
+    Quote {
+        ja: "私は今の話をしている。",
+        en: "I am talking about now.",
     },
 ];
