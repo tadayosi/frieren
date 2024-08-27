@@ -2,6 +2,8 @@
 name = "frieren"
 version = "0.2.1"
 edition = "2021"
+description = "Display free and used memory with freeze ❄️"
+license = "Apache-2.0"
 
 [dependencies]
 clap = { version = "4.5.4", features = ["derive"] }
