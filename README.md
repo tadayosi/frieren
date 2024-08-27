@@ -66,3 +66,9 @@ cargo build
 ```console
 cargo build --release
 ```
+
+## License
+
+The source code is licensed under [Apache License 2.0](./LICENSE).
+
+All the quotations are from ["Frieren: Beyond Journey's End" (Kanehito Yamada & Tsukasa Abe)](https://en.wikipedia.org/wiki/Frieren) and the copyright belongs to the original authors. This software is published as a respectful niji sosaku (二次創作) to the work.
